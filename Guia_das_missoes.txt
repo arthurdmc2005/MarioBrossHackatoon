@@ -1,0 +1,135 @@
+========================================
+       HACKATHON MARIO - MISSÕES
+========================================
+
+Bem-vindo ao desafio!
+
+O objetivo é encontrar e corrigir pequenos problemas
+no código do jogo.
+
+As missões estão organizadas por dificuldade. Você pode
+começar pelas mais fáceis e avançar conforme se sentir
+mais confortável.
+
+IMPORTANTE:
+- Não é necessário entender todo o projeto para resolver
+  as missões.
+- As localizações indicadas são pontos de partida.
+- A numeração das linhas pode mudar dependendo das
+  alterações feitas no código.
+- Teste o jogo depois de realizar cada correção.
+
+
+----------------------------------------
+MISSÃO 1 - CONTADOR DE MOEDAS
+Dificuldade: FÁCIL
+----------------------------------------
+
+Localização:
+Player.py
+Método: add_coins()
+Linha aproximada: 499
+
+Descrição:
+O contador de moedas não está funcionando como deveria.
+
+Encontre o método responsável por adicionar moedas ao
+contador e corrija o problema.
+
+
+----------------------------------------
+MISSÃO 2 - CONTADOR DE PONTUAÇÃO
+Dificuldade: FÁCIL
+----------------------------------------
+
+Localização:
+Player.py
+Método: add_score()
+Linha aproximada: 507
+
+Descrição:
+A pontuação do jogador não está sendo atualizada
+corretamente.
+
+Encontre o método responsável por adicionar pontos e
+corrija o problema.
+
+
+----------------------------------------
+MISSÃO 3 - PONTUAÇÃO DA MOEDA
+Dificuldade: FÁCIL
+----------------------------------------
+
+Localização:
+Platform.py
+Método: spawn_bonus()
+Trecho: recompensa da moeda
+
+Descrição:
+Ao coletar uma moeda de um bloco de bônus, Mario recebe
+uma pontuação diferente da esperada que é 200.
+
+Encontre o valor responsável pela pontuação da moeda e
+corrija-o.
+
+
+----------------------------------------
+MISSÃO 4 - PERDA DE VIDA
+Dificuldade: FÁCIL
+----------------------------------------
+
+Localização:
+Map.py
+Método: player_death()
+Trecho: atualização do número de vidas
+Linha aproximada: 346
+
+Descrição:
+Quando Mario morre, o contador de vidas apresenta um
+comportamento incorreto.
+
+Encontre a atualização responsável pelo número de vidas
+e faça a correção necessária.
+
+
+----------------------------------------
+MISSÃO 5 - BLOCO NÃO REAGE AO PULO
+Dificuldade: MÉDIO
+----------------------------------------
+
+Localização:
+Player.py
+Método: player_physics()
+Trecho: colisão com blocos
+Linha aproximada: 309
+
+Descrição:
+Mario consegue colidir com os blocos, mas um dos
+comportamentos esperados ao atingir um bloco por baixo
+não está acontecendo.
+
+Investigue a região indicada e corrija o problema.
+
+
+----------------------------------------
+MISSÃO 6 - COMPORTAMENTO DO BLOCO ?
+Dificuldade: MÉDIO
+----------------------------------------
+
+Localização:
+Platform.py
+Método: render()
+Trecho: bloco de perguntas (?)
+Linha aproximada: 80
+
+Descrição:
+O bloco de interrogação (?) não está se comportando
+corretamente.
+
+Analise a condição responsável por controlar seu
+comportamento e corrija o erro.
+
+
+========================================
+             BOA SORTE!
+========================================

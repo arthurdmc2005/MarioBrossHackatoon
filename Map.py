@@ -335,11 +335,15 @@ class Map(object):
             self.spawn_goombas(4240, 352, False)
             self.is_mob_spawned[1] = True
 
+# HACKATHON — MISSÃO 4
+# Ao perder uma vida, o contador de vidas de Mario está aumentando em vez de diminuir.
+# Encontre a atualização responsável pelo número de vidas e corrija o comportamento.
+
     def player_death(self, core):
         self.in_event = True
         self.get_player().reset_jump()
         self.get_player().reset_move()
-        self.get_player().numOfLives -= 1
+        self.get_player().numOfLives += 1
 
         if self.get_player().numOfLives == 0:
             self.get_event().start_kill(core, game_over=True)

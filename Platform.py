@@ -1,5 +1,10 @@
 import pygame as pg
 
+# HACKATHON — MISSÃO 3
+# Ao coletar uma moeda de um bloco de bônus, Mario recebe uma
+# pontuação diferente da esperada. Encontre o valor responsável pela
+# pontuação da moeda e corrija-o. A recompensa tem valor de 200
+
 
 class Platform(object):
     def __init__(self, x, y, image, type_id):
@@ -65,17 +70,22 @@ class Platform(object):
             core.get_sound().play('coin', 0, 0.5)
             core.get_map().spawn_debris(self.rect.x + 8, self.rect.y - 32, 1)
             core.get_map().get_player().add_coins(1)
-            core.get_map().get_player().add_score(200)
+            core.get_map().get_player().add_score(20)
 
     def destroy(self, core):
         core.get_map().spawn_debris(self.rect.x, self.rect.y, 0)
         core.get_map().remove_object(self)
 
+
+# HACKATHON — MISSÃO 6
+# O bloco de interrogação não está se comportando corretamente.
+# Encontre e corrija o erro nesta condição.
+
     def render(self, core):
 
-        # Bloco de perguntas
+        # Bloco ?
         if self.typeID == 22:
-            if not self.isActivated:
+            if self.isActivated:
                 self.update()
             elif self.shaking:
                 self.shake()

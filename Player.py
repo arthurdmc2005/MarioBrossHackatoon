@@ -306,6 +306,11 @@ class Player(object):
                         self.pos_x = self.rect.left
                         self.x_vel = 0
 
+# HACKATHON — MISSÃO 5
+# Quando Mario bate a cabeça em um bloco, o bloco deixa de executar seu
+# comportamento. Complete a colisão vertical para que o bloco seja ativado
+# quando apropriado.
+
     def update_y_pos(self, blocks, core):
         self.on_ground = False
         for block in blocks:
@@ -320,7 +325,7 @@ class Player(object):
                     elif self.y_vel < 0:
                         self.rect.top = block.rect.bottom
                         self.y_vel = -self.y_vel / 3
-                        self.activate_block_action(core, block)
+                        # TODO: executar a ação correspondente ao bloco
 
     def activate_block_action(self, core, block):
         # Bloco de perguntas
@@ -491,12 +496,28 @@ class Player(object):
         core.get_sound().play('fireball', 0, 0.5)
         self.next_fireball_time = pg.time.get_ticks() + 400
 
+# HACKATHON — MISSÃO 1
+# Ao coletar moedas, o contador do jogador não está sendo atualizado.
+# Complete este método para que a quantidade recebida seja adicionada ao
+# total de moedas do jogador.
+
     def add_coins(self, count):
-        self.coins += count
+         # TODO: implementar a atualização do total de moedas
+          pass
+
+
+
+# HACKATHON — MISSÃO 2
+# A pontuação recebida por ações do jogador não está sendo contabilizada.
+# Complete o método responsável por atualizar a pontuação.
 
     def add_score(self, count):
-        self.score += count
+          # TODO: implementar a atualização da pontuação
+          pass
+
+
 
     def render(self, core):
         if self.visible:
             core.screen.blit(self.image, core.get_map().get_camera().apply(self))
+        
