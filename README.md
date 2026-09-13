@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/josuejuca/Super-Mario-Bros/">
+  <a href="https://github.com/Liga-Academica-UFVJM/Super-Mario-Bros/">
     <img src="https://upload.wikimedia.org/wikipedia/pt/0/03/Super_Mario_Bros._box.png" alt="[ ]">
   </a>
 
@@ -35,7 +35,7 @@
 Execute o seguinte comando para clonar o repositório e instale as dependências:
 
 ```cmd
-git clone https://github.com/josuejuca/Super-Mario-Bros.git
+git clone https://github.com/Liga-Academica-UFVJM/Super-Mario-Bros.git
 cd Super-Mario-Bros
 pip install pygame pytmx
 ```
@@ -61,14 +61,14 @@ Você podera jogar usando os controles abaixo.
 
 <center>
 <p align="center">
-  <img src="https://assets-juca.netlify.app/smb-pre-1.png" alt="[ ]">
+  <img src="https://assets-liga-academica-ufvjm.netlify.app/smb-pre-1.png" alt="[ ]">
 </p>
   <hr>
 <p align="center">
-  <img src="https://assets-juca.netlify.app/smb-pre-2.png" alt="[ ]">
+  <img src="https://assets-liga-academica-ufvjm.netlify.app/smb-pre-2.png" alt="[ ]">
 </p>
   <hr>
 <p align="center">
-  <img src="https://assets-juca.netlify.app/smb-pre-3.png" alt="[ ]">
+  <img src="https://assets-liga-academica-ufvjm.netlify.app/smb-pre-3.png" alt="[ ]">
 </p>
 </center>
