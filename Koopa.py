@@ -66,7 +66,7 @@ class Koopa(Entity):
             core.get_map().get_mobs().remove(self)
 
     def change_state(self, core):
-        self.state += 1
+        self.state += 2
         self.current_image = 2
 
         # 0 de 1 state

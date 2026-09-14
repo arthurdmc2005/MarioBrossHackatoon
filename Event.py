@@ -49,6 +49,15 @@ class Event(object):
         # Se morreu morreu
         core.get_map().get_player().set_image(len(core.get_map().get_player().sprites))
 
+#HACKATHON — MISSÃO 12
+#Ao finalizar a fase, a pontuação depende do tempo restante:
+#300 ou mais → 5000 pontos
+#200 até menos de 300 → 2000 pontos
+#abaixo de 200 → 1000 pontos
+
+#Alguns jogadores estão recebendo 1000 pontos quando deveriam receber
+#2000. Corrija a condição intermediária.
+
     def start_win(self, core):        
         # Jogador toca a bandeira.
         
@@ -68,7 +77,7 @@ class Event(object):
         if core.get_map().time >= 300:
             core.get_map().get_player().add_score(5000)
             core.get_map().spawn_score_text(core.get_map().get_player().rect.x + 16, core.get_map().get_player().rect.y, score=5000)
-        elif 200 <= core.get_map().time < 300:
+        elif 200 <= core.get_map().time > 300:
             core.get_map().get_player().add_score(2000)
             core.get_map().spawn_score_text(core.get_map().get_player().rect.x + 16, core.get_map().get_player().rect.y, score=2000)
         else:

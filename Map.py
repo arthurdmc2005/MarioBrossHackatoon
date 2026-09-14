@@ -293,6 +293,12 @@ class Map(object):
             elif self.time == 0:
                 self.player_death(core)
 
+#HACKATHON — MISSÃO 9
+#Ao derrotar inimigos em sequência, a pontuação deveria voltar
+#gradualmente ao valor inicial depois de um intervalo sem eliminações.
+#O sistema está se comportando ao contrário. Corrija a atualização da
+#pontuação da sequência.
+
     def update_score_time(self):
         """
 
@@ -312,13 +318,18 @@ class Map(object):
             for mob in self.mobs:
                 mob.check_collision_with_player(core)
 
+#HACKATHON — MISSÃO 8
+#Alguns inimigos estão aparecendo antes de Mario chegar à região
+#correspondente do mapa. Corrija a condição responsável pelo primeiro
+#grupo de inimigos.
+
     def try_spawn_mobs(self, core):
         """
 
         These mobs will appear when player will reach the certain x-coordinate
 
         """
-        if self.get_player().rect.x > 2080 and not self.is_mob_spawned[0]:
+        if self.get_player().rect.x < 2080 and not self.is_mob_spawned[0]:
             self.spawn_goombas(2495, 224, False)
             self.spawn_goombas(2560, 96, False)
             self.is_mob_spawned[0] = True

@@ -25,6 +25,11 @@ class Goombas(Entity):
         ]
         self.images.append(pg.transform.flip(self.images[0], 0, 180))
 
+# HACKATHON — MISSÃO 7
+# Ao ser esmagado, o Goomba deve mudar seu estado para que o jogo
+# reconheça que ele foi derrotado e inicie sua animação de remoção.
+# Corrija o estado da entidade após o esmagamento.
+
     def die(self, core, instantly, crushed):
         if not instantly:
             core.get_map().get_player().add_score(core.get_map().score_for_killing_mob)
@@ -34,7 +39,7 @@ class Goombas(Entity):
                 self.crushed = True
                 self.image_tick = 0
                 self.current_image = 2
-                self.state = -1
+                self.state = 0
                 core.get_sound().play('kill_mob', 0, 0.5)
                 self.collision = False
 
